@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Galería de imágenes</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    
+    .container {
+      width: 400px;
+      height: 300px;
+    }
+    
+    .slick-slider {
+      height: 100%;
+    }
+    
+    .slick-slide img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="slick-slider">
+      <div><img src="https://th.bing.com/th/id/OIP.O4-1rhCkHBY4fW8axAsbQQAAAA?pid=ImgDet&rs=1" width="100px" height="100px" alt="Imagen 1"></div>
+      <div><img src="https://www.talanuchemical.com/wp-content/uploads/2019/12/logo_talanu.png"  width="100px" height="100px"  alt="Imagen 2"></div>
+      <div><img src="https://logodownload.org/wp-content/uploads/2018/09/purina-logo-1.png"  width="100px" height="100px"  alt="Imagen 3"></div>
+      <div><img src="https://th.bing.com/th/id/R.3b027527b2d02d6621cdb3c0ceb69b40?rik=IDSWQV9b1bGGvw&pid=ImgRaw&r=0"  width="100px" height="100px"  alt="Imagen 4"></div>
+      <div><img src="https://www.incolma.com/wp-content/uploads/2018/10/logo_colima.jpg"  width="100px" height="100px"  alt="Imagen 5"></div>   
+      <div><img src="https://th.bing.com/th/id/OIP.5gPrq9ZrLDmMdCGp-DRRFAAAAA?pid=ImgDet&rs=1"  width="100px" height="100px"  alt="Imagen 1"></div>
+      <div><img src="https://b2bmarketplace.procolombia.co/sites/default/files/styles/max_325x325/public/2019-22/logo_fercon_3.jpg"  width="100px" height="100px"  alt="Imagen 6"></div>
+      <div><img src="https://th.bing.com/th/id/OIP.X8F1NQ6oOPNXo_yPjlv8IgHaFX?pid=ImgDet&rs=1" alt="Imagen 7"></div>
+      <div><img src="https://th.bing.com/th/id/R.71cd65893ca5226e87f4325d2811d19b?rik=MwCRJz%2f8xahfww&riu=http%3a%2f%2fwww.redcontigo.com.co%2fsites%2fdefault%2ffiles%2f2019-04%2fsolla.jpg&ehk=ik9giGIUboJNgc6cawxfjtzNOzX6TZl%2bMfancRg4j%2b4%3d&risl=&pid=ImgRaw&r=0        "  width="100px" height="100px"  alt="Imagen 8"></div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slick-slider').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: false,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        pauseOnHover: false
+      });
+    });
+  </script>
+</body>
+</html>

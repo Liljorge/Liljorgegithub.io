@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Almacén Agrícola - medicamentos</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <style>
+    #productos-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    .producto {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Almacén Agrícola</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section>
+    <h2>Medicamentos</h2>
+    <p>Descripción de las semillas y productos relacionados.</p>
+    <input type="text" id="buscador" placeholder="Buscar Medicina">
+    <p>Filtrar por:</p>
+    <select id="filtro">
+      <option value="todos">Todos</option>
+      <option value="desparasitante">Desparasitantes</option>
+      <option value="antiflamatorio">Antiflamatorios</option>
+      <option value="vitaminas">Vitaminas</option>
+      <option value="Antibioticos">Antibióticos</option>
+      <option value="Jabon y shampoo">Jabon y shampoo</option>
+    </select>
+    
+
+    <div id="productos-container">
+      <div class="producto" data-tipo="desparasitante">
+        <img src="https://maravedi.com.co/images/productos/canimarOral.png" alt="Semilla 1">
+        <h4> Canimar Suspensión Oral 2 ML</h4>
+        <p>Desparasitante</p>
+        <p>Precio: $XX.XX</p>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="producto" data-tipo="desparasitante">
+        <img src="https://www.agrocampo.com.co/media/catalog/product/cache/c49bee17ef1a166135589f0329fd61b1/1/1/111104000_ed-min.jpg" alt="Semilla 4">
+        <h4> PARACANIS NF</h4>
+        <p>Desparasitante</p>
+        <p>Precio: $XX.XX</p>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="producto" data-tipo="antiflamatorio">
+        <img src="https://kyrovet.com/wp-content/uploads/2021/12/4.-ANKOFEN-GOTAS.jpg" alt="Semilla 5">
+        <h4>Ankofen Gotas</h4>
+        <p>Antiinflamatorio, Analgésico, Antipirético No Esteroide</p>
+        <p>Precio: $XX.XX</p>
+        <button>Agregar al carrito</button>
+      </div>
+      <div class="producto" data-tipo="vitaminas">
+        <img src="https://kyrovet.com/wp-content/uploads/2021/12/12.-CANPLUSVIT-1000x696.jpg" alt="Semilla 6">
+        <h4>Canplusvit</h4>
+        <p>Vitaminas</p>
+        <p>Precio: $XX.XX</p>
+        <button>Agregar al carrito</button>
+      </div> 
+      <div class="producto" data-tipo="Jabon y shampoo">
+        <img src="https://th.bing.com/th/id/OIP.DXVxzy1GzjqF-F721mtsEwHaHa?pid=ImgDet&rs=1" alt="Semilla 6">
+        <h4>Jabon Asuntol X 100 Gr</h4>
+        <p> Jabon contiene coumaphos 1g</p>
+        <p>Precio: $XX.XX</p>
+        <button>Agregar al carrito</button>
+      </div> 
+      <div class="producto" data-tipo="desparasitante">
+        <img src="https://elpatopets.com/wp-content/uploads/2022/04/164557-800-auto-768x768.webp" alt="Semilla 6">
+        <h4>CREDELIO 3 TABLETAS 11-22KG</h4>
+        <p>Eficaz contra garrapatas y pulgas</p>
+        <p>Precio: $XX.XX</p>
+        <button>Agregar al carrito</button>
+      </div> 
+      <div class="producto" data-tipo="vitaminas">
+        <img src="https://kyrovet.com/wp-content/uploads/2021/12/12.-CANPLUSVIT-1000x696.jpg" alt="Semilla 6">
+        <h4>Canplusvit</h4>
+        <p>Vitaminas</p>
+        <p>Precio: $XX.XX</p>
+        <button>Agregar al carrito</button>
+      </div> 
+      <div class="producto" data-tipo="Antibioticos">
+        <img src="https://biozoo.com.mx/assets/productos/Gorbazoo-comp.jpg" alt="Semilla 6">
+        <h4>GORBAZOO</h4>
+        <p>Antibióticos</p>
+        <p>Cada tableta contiene:</p>
+        <p>Sulfadoxina</p>
+        <p>120 mg</p>
+        <p>Trimetoprim</p>
+        <p>30 mg</p>
+        <p>Excipiente c.b.p.</p>
+        <p>1 tableta</p>
+        <p>Precio: $XX.XX</p>
+        <button>Agregar al carrito</button>
+      </div> 
+      <div class="producto" data-tipo="Antibioticos">
+        <img src="https://biozoo.com.mx/assets/productos/Cefamax.jpg" alt="Semilla 6">
+        <h4>CEFAMAX</h4>
+        <p>Antibióticos</p>
+        <p>Cada tableta contiene:</p>
+        <p>Cefalexina</p>
+        <p>250 mg</p>
+        <p>Excipiente c.b.p.</p>
+        <p>1 tableta</p>
+        <p>Precio: $XX.XX</p>
+        <button>Agregar al carrito</button>
+      </div> 
+    </div>
+  </section>
+
+  <script>
+    const buscador = document.querySelector("#buscador");
+    const filtro = document.querySelector("#filtro");
+    const productosContainer = document.querySelector("#productos-container");
+
+    buscador.addEventListener("input", filtrarProductos);
+    filtro.addEventListener("change", filtrarProductos);
+
+    function filtrarProductos() {
+      const textoBuscado = buscador.value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const tipoSeleccionado = filtro.value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+  const productos = productosContainer.getElementsByClassName("producto");
+
+  for (let i = 0; i < productos.length; i++) {
+    const producto = productos[i];
+    const nombre = producto.getElementsByTagName("h4")[0].innerText.toLowerCase();
+    const tipo = producto.getAttribute("data-tipo").toLowerCase(); // Convertir a minúsculas
+
+    if (nombre.includes(textoBuscado) && (tipoSeleccionado === "todos" || tipo === tipoSeleccionado)) {
+      producto.style.display = "block";
+    } else {
+      producto.style.display = "none";
+    }
+  }
+}
+
+  </script>
+</body>
+</html>

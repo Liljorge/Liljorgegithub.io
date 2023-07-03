@@ -1,0 +1,71 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        header {
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+        }
+        
+        nav ul li a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+        
+        .customer-service {
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        .customer-service h2 {
+            font-size: 24px;
+        }
+        
+        .customer-service p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .customer-service ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .customer-service ul li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .customer-service ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .customer-service ul li a:hover {
+            color: #ff0000;
+        }
